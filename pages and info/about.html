@@ -1,17 +1,15 @@
 <div class="about-page">
-    <img class="profile-img" src="assets/User_01.png" alt="Profile placeholder">
+    <img class="profile-img" src="assets/ProfilePicture.png" alt="Profile placeholder">
 
     <div class="about-body">
         <h2 class="page-title">Matias Benjamin Sánchez Sepúlveda</h2>
-        <p class="job-title" style="margin-top:6px;">Desarrollador de Juegos</p>
+        <p class="job-title" style="margin-top:6px;">Desarrollador de Videojuegos, Artista 3D, Programador</p>
 
         <p class="about-summary" style="margin-top:18px;">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos officiis a sed veniam fugiat dolor quo natus, maxime quis tempora asperiores maiores at exercitationem. Molestiae libero laborum eveniet provident voluptas.
         </p>
 
         <div class="about-actions" style="margin-top:18px; display:flex; gap:12px; align-items:center;">
-            <button class="btn" data-page="pages and info/resume.html" data-title="Resume">Ver CV</button>
-            <a class="btn-link" href="mailto:you@example.com">you@example.com</a>
         </div>
 
         <hr style="clear:both; margin:24px 0 18px 0; border:none; border-top:1px solid rgba(255,255,255,0.06);">
@@ -19,12 +17,12 @@
         <section class="quick-info" aria-label="Quick info" style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
             <div>
                 <h3 style="color:var(--accent); margin:0 0 8px 0;">Educación</h3>
-                <p style="margin:0;"><strong>Institución / Escuela</strong><br>Programador Full Stack (placeholder)</p>
+                <p style="margin:0;"><strong>Liceo:</strong> Arturo Matte Larrain </p>
             </div>
 
             <div>
                 <h3 style="color:var(--accent); margin:0 0 8px 0;">Contacto</h3>
-                <p style="margin:0;">Teléfono: +56 9 0000 0000<br>Correo: you@example.com</p>
+                <p style="margin:0;">Correo: matias.sanchez0927@gmail.com <br> Institucional: matias.sanchez.sepulveda@alumnos.sip.cl</p>
             </div>
 
             <div>
@@ -45,16 +43,25 @@
             </div>
         </section>
 
-        <!-- QR code for CV (replace assets/qr-cv.png with your PNG later) -->
+        <!-- QR code for CV + download link -->
         <div class="qr-section" style="clear:both; margin-top:22px; display:flex; gap:16px; align-items:center;">
-            <img src="assets/qr-cv.png" alt="QR code to CV" style="width:120px; height:120px; object-fit:contain; border-radius:6px; background:#fff; padding:6px;">
             <div>
-                <p style="margin:0 0 6px 0; color:var(--muted);">Scan to open my CV</p>
-                <p style="margin:0;">
-                    <button class="btn" data-page="pages and info/resume.html" data-title="Resume">Open CV</button>
-                    <a href="pages and info/resume.html" style="margin-left:12px; color:var(--accent); text-decoration:underline;">Open as page</a>
+                <p style="margin:0 0 6px 0; color:var(--muted);">Descarga mi CV</p>
+                <p style="margin:0; display:flex; gap:12px; align-items:center;">
+                    <a id="cv-download" class="btn" href="CV File/Matias Sanchez.pdf" download style="background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:6px;color:var(--accent);text-decoration:none;">Descargar</a>
                 </p>
             </div>
         </div>
+
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js">
+        var qrcode = new QRCode("qr_code_container", {
+        text: "CV File/Matias Sanchez.pdf",
+        width: 128,
+        height: 128,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+</script>
